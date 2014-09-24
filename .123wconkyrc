@@ -23,7 +23,7 @@ text_buffer_size 2048
 
 gap_x 40
 gap_y 50
-minimum_size 1000 1000
+minimum_size 600 400
 maximum_width 1600
 own_window yes
 own_window_type conky
@@ -59,12 +59,12 @@ ${offset 30}CPU${offset 50}RAM${offset 50}ROOT${offset 50}UP${offset 50}DOWN
 
 
 
-${font Xirod:size=15}${voffset 0}${offset -2}${font Xirod:size=15}${voffset -5}${color1}${cpu}% ${freq_g} Ghz ${machine}  ${acpitemp}°C
+${font Xirod:size=15}${voffset 0}${offset 15}${font Xirod:size=15}${voffset -5}${color1}${cpu}% ${freq_g} Ghz ${machine}  ${acpitemp}°C
 ${font Xirod:size=15}${voffset 0}${offset -2}${font Xirod:size=15}${voffset 5}${color1}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq | cut -c 1-26}
-${font Xirod:size=15}${voffset -12}${offset 93}${font Xirod:size=15}${voffset 15}${color1}${mem}/${memmax}
-${font Xirod:size=15}${voffset 0}${offset 93}${font Xirod:size=15}${voffset 15}${color1}${fs_used /}/${fs_size /}
+${font Xirod:size=15}${voffset -12}${offset 105}${font Xirod:size=15}${voffset 15}${color1}${mem}/${memmax}
+${font Xirod:size=15}${voffset 0}${offset 105}${font Xirod:size=15}${voffset 15}${color1}${fs_used /}/${fs_size /}
 
-${font Xirod:size=15}${voffset -15}${offset -30}${font Xirod:size=15}${voffset -35}${color1}${diskio}/s
+${font Xirod:size=15}${voffset -13}${offset 0}${font Xirod:size=15}${voffset -35}${color1}${diskio}/s
 ${font Xirod:size=15}${voffset 0}${offset -1}${font Xirod:size=15}${voffset 0}${color1}${pre_exec cat /etc/issue.net}
 ${font Xirod:size=15}${voffset -130}${offset 406}${font Xirod:size=15}${voffset -10}${color1}${totalup eth0}/${upspeed eth0}
 ${font Xirod:size=15}${voffset 0}${offset 406}${font Xirod:size=15}${voffset 0}${color1}${totaldown eth0}/${downspeed eth0}
